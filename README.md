@@ -14,3 +14,6 @@ Method `handle_connection` masih melakukan hal yang sama seperti sebelumnya, nam
 ### Commit 3 Reflection
 Kode tersebut memerlukan *refactoring* karena terdapat duplikasi pada blok if dan else, keduanya sama-sama membaca file dan menulis konten ke `stream`. Perbedaannya hanya pada `status_line` dan `filename`. Refactoring dilakukan dengan menarik perbedaan-perbedaan tersebut ke dalam baris if dan else terpisah dan memasukkan nilai `status_line` dan `filename` ke dalam sebuah variabel. Kemudian variabel tersebut dapat digunakan untuk membaca file dan menulis respons. Maka blok if dan else hanya mengembalikan nilai yang sesuai untuk `status_line` dan `filename` dalam sebuah tuple. Kemudian kita dapat menggunakan destrukturisasi untuk menetapkan dua nilai tersebut ke `status_line` dan `filename` menggunakan pattern pada `let` *statement*.
 ![alt text](https://github.com/rafizia/advprog-modul6/blob/master/src/image/commit3.png?raw=true)
+
+### Commit 4 Reflection
+Pada kode tersebut if statement kedua berfungsi untuk menerima request ke `/sleep`. Ketika request tersebut diterima, server akan sleep selama 10 detik sebelum merender halaman HTML yang berhasil. Cara ini dapat menjadi cara untuk menguji bagaimana server menangani delay atau untuk mensimulasikan kondisi jaringan yang lambat.
