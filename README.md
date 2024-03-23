@@ -17,3 +17,6 @@ Kode tersebut memerlukan *refactoring* karena terdapat duplikasi pada blok if da
 
 ### Commit 4 Reflection
 Pada kode tersebut if statement kedua berfungsi untuk menerima request ke `/sleep`. Ketika request tersebut diterima, server akan sleep selama 10 detik sebelum merender halaman HTML yang berhasil. Cara ini dapat menjadi cara untuk menguji bagaimana server menangani delay atau untuk mensimulasikan kondisi jaringan yang lambat.
+
+### Commit 5 Reflection
+ThreadPool adalah kumpulan dari beberapa thread yang tersedia untuk mengeksekusi tugas-tugas secara paralel. Saat program menerima tugas baru, program akan menugaskan salah satu thread di threadpool untuk mengerjakan tugas tersebut. Thread yang tersisa tersedia untuk menangani tugas lain yang masuk saat thread pertama memproses suatu pekerjaan. Saat thread pertama selesai memproses tugasnya, thread tersebut dikembalikan ke kumpulan thread yang menganggur dan siap untuk menangani tugas baru. Hal ini dapat meningkatkan efisiensi dan kinerja aplikasi, sehingga dapat meningkatkan throughput dari server.
